@@ -1,0 +1,364 @@
+*{
+    border-radius: 0 !important;
+    touch-action: manipulation;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.block-area {
+    width: 100%;
+    float: left;
+}
+
+.block-area h3{
+    background: rgba(0,0,0,.5);
+    margin: 15px 15px !important;
+    padding: 10px;
+    font-size: 18px !important;
+}
+
+@media (min-width: 780px) {
+    div#photo-gallery-alt {
+        padding: 15px 0 0; 
+    }
+}
+@media (max-width: 780px) {
+    .block-area {
+        padding: 15px 10px 0; 
+    }
+}
+
+body.ps-active 
+{
+    -webkit-text-size-adjust: none;
+    overflow: hidden;
+}
+body.ps-active * 
+{ 
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+body.ps-active *:focus 
+{ 
+    outline: 0; 
+}
+
+
+/* Document overlay */
+div.ps-document-overlay 
+{
+    background: #000;
+}
+
+
+/* Viewport */
+div.ps-viewport 
+{
+    background: #000;
+    cursor: pointer;
+}
+
+
+/* Zoom/pan/rotate layer */
+div.ps-zoom-pan-rotate{
+    background: #000;
+}
+
+
+/* Slider */
+div.ps-slider-item-loading 
+{ 
+    background: url(../loadinfo.gif) no-repeat center center; 
+}
+
+/* Caption */
+div.ps-caption
+{ 
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+div.ps-caption-bottom
+{ 
+    border-top: 1px solid #42403f;
+    border-bottom: none;
+}
+
+div.ps-caption-content
+{
+    padding: 13px;
+}
+
+
+/* Toolbar */
+div.ps-toolbar
+{ 
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    height: 44px;
+    display: table;
+    table-layout: fixed;
+}
+
+div.ps-toolbar-top 
+{
+    border-bottom: 1px solid #42403f;
+    border-top: none;
+}
+
+div.ps-toolbar-close, div.ps-toolbar-previous, div.ps-toolbar-next, div.ps-toolbar-play
+{
+    cursor: pointer;
+    display: table-cell;
+}
+
+div.ps-toolbar div div.ps-toolbar-content
+{
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 0;
+    background-image: url(../img/photoswipe-icons.png);
+    background-repeat: no-repeat;
+}
+
+div.ps-toolbar-close div.ps-toolbar-content
+{
+    background-position: 0 0;
+}
+
+div.ps-toolbar-previous div.ps-toolbar-content
+{
+    background-position: -44px 0;
+}
+
+div.ps-toolbar-previous-disabled div.ps-toolbar-content
+{
+    background-position: -44px -44px;
+}
+
+div.ps-toolbar-next div.ps-toolbar-content
+{
+    background-position: -132px 0;
+}
+
+div.ps-toolbar-next-disabled div.ps-toolbar-content
+{
+    background-position: -132px -44px;
+}
+
+div.ps-toolbar-play div.ps-toolbar-content
+{
+    background-position: -88px 0;
+}
+
+div.gallery-item {
+    margin-bottom: 15px;
+}
+
+div.gallery-item, div.gallery-item * {
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    transition: all 300ms;
+}
+
+div.gallery-item > a > img {
+    width: 100%;
+    border: 4px solid rgba(0,0,0,0.3);
+}
+
+
+div.gallery-item > a {
+    position: relative;
+    display: block;
+}
+
+div.gallery-item > a > span {
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+    background: rgba(0,0, 0, 0.86);
+    left: 30px;
+    opacity: 0;
+}
+
+div.gallery-item > a > span i {
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.58);
+    width: 38px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    margin-left: -19px;
+    top: 50%;
+    margin-top: -23px;
+}
+
+div.gallery-item > a:hover span {
+    opacity: 1;
+}
+
+
+
+
+/* Hi-res retina display */
+@media only screen and (-webkit-min-device-pixel-ratio: 2)
+{
+    div.ps-toolbar div div.ps-toolbar-content
+    {
+        -webkit-background-size: 176px 88px;
+        background-image: url(../img/photoswipe-icons@2x.png);
+    }
+}
+
+/* style filters */
+
+.form-control, .message-search {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-shadow: none;
+    color: #fff;
+    box-shadow: none;
+    -webkit-appearance: none;
+}
+
+.input-focused {
+   box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.input-transparent {
+   border: 0;
+}
+
+textarea.form-control {
+    resize: none;
+    overflow: auto;
+}
+
+.select .form-control {
+    height: auto;
+}
+
+.select .form-control:hover, .select .form-control:focus  {
+    color: #fff;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: rgba(238, 238, 238, 0.09);
+}
+
+.m-b-10 {
+    margin-bottom: 10px !important;
+}
+
+select:not([multiple]) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    line-height: normal !important;
+    background-image: url(../img/select-bg.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    color: :;
+}
+
+::selection {
+    background: rgba(255,255,255,0.1);
+}
+
+
+body, button, input, textarea, select, .btn {
+    -webkit-font-smoothing: antialiased;
+}
+
+.box-details label{
+    color: #FFF;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 0px 0px 5px #000;
+}
+
+.box-details div.precio{
+    padding: 2px 0;
+}
+
+.box-details div.precio>input{
+    color: yellow;
+    font-size: 21px;
+    font-weight: bold;
+    height: auto !important;
+    text-align: center;    
+}
+
+.box-details div.box-cantidad input{
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    text-align: center;
+}
+.box-details div.box-cantidad input[type="text"]{
+    float: left;
+}
+.box-details div.box-cantidad input[type="button"]{
+    background: #d9534f;
+    border: 0;
+    color: #FFF;
+    padding: 6.5px;
+    font-size: 12px;
+    float:right;
+}
+
+.box-details div.box-cantidad input[type="button"]:hover{
+    background: #fb6e52;
+}
+
+.box-btn-confirm{
+    margin: 10px 0;
+}
+.box-btn-confirm>a{
+    width: 100%;
+    background: #fb6e52 !important;
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 10px 0;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 10px 2px;
+    text-shadow: none !important;   
+}
+.box-btn-confirm>a:hover{
+    background: #d9534f !important;
+}
+
+.box-btn-add>a{
+    width: 100%;
+    background: rgba(0,0,0,.3);
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 10px 2px;
+    text-shadow: none !important; 
+}
+
+.box-btn-add>a:hover{
+    background: rgba(0,0,0,.7);
+}
+
+.table select,.table input{
+    margin: 0 !important;
+}
